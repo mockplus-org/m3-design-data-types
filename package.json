@@ -1,0 +1,18 @@
+{
+  "name": "@mk/m3-design-data-types",
+  "version": "0.0.2",
+  "description": "M3 Design Data Types",
+  "main": "./index.js",
+  "types": "./index.d.ts",
+  "files": [
+    "./**/*.d.ts",
+    "./index.js"
+  ],
+  "keywords": [
+    "m3",
+    "design data",
+    "types"
+  ],
+  "author": "",
+  "license": "ISC"
+}
