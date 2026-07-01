@@ -3426,3 +3426,37 @@ export interface M3DesignFile {
      */
     styles: M3StyleResources;
 }
+/**
+ * 设计文件的元信息，用于标识文件本身及其在多文件协作中的状态。
+ */
+export interface M3FileInfo {
+    /**
+     * name: 用户在设计工具中看到的名称，与 M3DesignFile.name 保持一致。
+     */
+    name: string;
+    /**
+     * fileID: 设计文件的唯一标识，对应 m3 文件的 fileKey。
+     */
+    fileID: string;
+    /**
+     * active: 当前是否处于打开/激活状态，多文件协作时用于区分焦点文件。
+     */
+    active: boolean;
+    /**
+     * currentPageID: 当前激活页面的 ID，对应文档树中某个 CANVAS 节点的 ID。
+     */
+    currentPageID?: string;
+    /**
+     * workMode: 文件的工作模式（如设计 / 原型 / 混合），用于区分 UI 与原型能力集。
+     */
+    workMode?: string;
+    /**
+     * docVersion: 设计文件的文档版本号，用于变更检测与协作同步。
+     */
+    docVersion?: number;
+}
+
+/**
+ * Returns the bundled public type declaration text for M3 design data.
+ */
+export function get_design_data_spec(): string;
